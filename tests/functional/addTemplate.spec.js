@@ -2,6 +2,7 @@ import { test } from "../../lib/BaseTest.js";
 import { config } from "../../config/testConfig.js";
 
 test.describe("Template Messages", () => {
+  
   test.beforeEach(async ({ loginPage }) => {
     await loginPage.visit();
     await loginPage.login(config.credentials.username1, config.credentials.password);
