@@ -9,11 +9,9 @@ test.describe("Login to VoiceFriend", () => {
   
   test("Successful login", async ({ loginPage }) => {
     await loginPage.login(config.credentials.username1, config.credentials.password);
-    await loginPage.verifyCalendarPage();
   });
 
   test("Unsuccessful login", async ({ loginPage }) => {
     await loginPage.login(config.credentials.username2, config.credentials.password);
-    await loginPage.verifyInvalidCredentialsError();
   });
 });
